@@ -117,7 +117,7 @@ function App() {
         console.log(err)
       })
   }
-//
+
   function handleAddPlace(newPhoto) {
     api.postPhoto(newPhoto)
       .then((newCard) => {
@@ -211,8 +211,8 @@ function App() {
         onAddPlace={handleAddPlaceClick}
         onEditAvatar={handleEditAvatarClick}
         onCardClick={handleSelectedCard}
-        likeCard={handleCardLike}
-        deleteCard={handleCardDelete} cards={cards} />
+        onCardLike={handleCardLike}
+        onCardDelete={handleCardDelete} cards={cards} />
       <Route path="/sign-in">
         <Login handleLogin={handleLogin} setEmail={setEmail}/>
       </Route>
@@ -249,7 +249,7 @@ function App() {
           buttonCaption='Да'
           isOpen={isConfirmPopupOpen}
           onClose={closeAllPopups} />
-          <ImagePopup
+      <ImagePopup
           onClose={closeAllPopups}
           card={selectedCard}
           isOpen={isImagePopupOpen} />
