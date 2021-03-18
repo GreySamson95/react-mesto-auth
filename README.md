@@ -1,5 +1,5 @@
 
-# [Место Russia auth]
+# Место Russia auth
 
 
 ## Цель проекта:
